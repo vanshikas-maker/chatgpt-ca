@@ -1,0 +1,252 @@
+/* ---------- Reset and base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fcfcfc;
+  color: #0d0d0d;
+  font-size: 15px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Common icon style (all icons are inline SVG) */
+.icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.icon.small {
+  width: 15px;
+  height: 15px;
+  color: #666;
+}
+
+/* ---------- Page layout: sidebar + main ---------- */
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  width: 258px;
+  background: #fcfcfc;
+  border-right: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  padding: 0 8px;
+}
+
+.sidebar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8px 16px;
+}
+
+.brand {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.menu {
+  flex: 1;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.menu-item:hover {
+  background: #efefef;
+}
+
+.push {
+  margin-left: auto;
+}
+
+/* Login box at bottom of sidebar */
+.promo {
+  border-top: 1px solid #e5e5e5;
+  margin: 0 -8px;
+  padding: 24px 18px 20px;
+}
+
+.promo h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.promo p {
+  font-size: 14px;
+  color: #6b6b6b;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-dark {
+  background: #0d0d0d;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background: #333;
+}
+
+.btn-outline {
+  background: #fff;
+  border: 1px solid #d9d9d9;
+}
+
+.btn-outline:hover {
+  background: #f3f3f3;
+}
+
+.btn-full {
+  display: block;
+  width: 100%;
+  border-radius: 24px;
+  padding: 13px;
+}
+
+/* ---------- Main area ---------- */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 6px 4px 24px;
+  height: 52px;
+}
+
+.model {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth {
+  display: flex;
+  gap: 8px;
+}
+
+/* ---------- Centre content ---------- */
+.center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.center h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 36px;
+}
+
+.searchbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 90%;
+  max-width: 770px;
+  height: 54px;
+  padding: 0 10px 0 18px;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 30px;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.07);
+}
+
+.searchbox input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.searchbox input::placeholder {
+  color: #8f8f8f;
+}
+
+.send {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #a9b8f7;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.send:hover {
+  background: #8da1f2;
+}
+
+/* ---------- Footer note ---------- */
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #6b6b6b;
+  padding: 0 20px 6px;
+}
+
+.footer a {
+  text-decoration: underline;
+}
+
+/* ---------- Mobile: hide sidebar on small screens ---------- */
+@media (max-width: 800px) {
+  .sidebar {
+    display: none;
+  }
+
+  .center h2 {
+    font-size: 22px;
+  }
+}
